@@ -34,7 +34,7 @@ function addScorePlayer() {
     // Si je score est supérieur ou égale à 100 on affiche le gagnant sinon on passe ou joueur 2;
     document.querySelector('#score-' + playerRound).textContent = scorePlayer[playerRound];
     // Si je score est supérieur ou égale à 100 on affiche le gagnant sinon on passe ou joueur 2;
-    scorePlayer[playerRound] >= 10 ? toWinGame() : playerNext();
+    scorePlayer[playerRound] >= 100 ? toWinGame() : playerNext();
   }
 };
 
