@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  transition: all 100ms ease-in-out;
+  border-bottom: 1px solid #000000;
+  font-weight: 100;
+  cursor: pointer;
+}
+.btn-new {
+  text-transform: uppercase;
+  font-size: 20px;
+  top: 25px;
+  left: 450px;
+}
+.btn-new:hover {
+  transform: scale(1.07);
+}
+.btn-roll {
+  text-transform: uppercase;
+  font-size: 20px;
+  top: 413px;
+  left: 455px;
+}
+.btn-roll:hover {
+  transform: scale(1.07);
+}
+.btn-hold {
+  text-transform: uppercase;
+  font-size: 20px;
+  top: 465px;
+  left: 472px;
+}
+.btn-hold:hover {
+  transform: scale(1.07);
+}
+
+@-webkit-keyframes disappearance {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+@keyframes disappearance {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 1000px;
+  box-shadow: 0px 0px 30px #d6d6d6;
+  text-align: center;
+}
+
+.player-0 {
+  width: 500px;
+  height: 600px;
+}
+
+.player-1 {
+  width: 500px;
+  height: 600px;
+}
+
+.player-score {
+  position: relative;
+  top: 110px;
+  font-size: 70px;
+  font-weight: 100;
+  color: #ff0000;
+}
+
+.name {
+  position: relative;
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  top: 100px;
+}
+
+.current {
+  margin-top: 7px;
+  font-size: 20px;
+}
+.current .current-score {
+  color: white;
+  font-size: 27px;
+}
+
+.current {
+  position: relative;
+  background: #ff0000;
+  width: 130px;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 10px 25px;
+  top: 280px;
+}
+
+.active {
+  background-color: #f5f5f5;
+}
+.active .name::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  top: 17px;
+  margin-left: 7px;
+  border-radius: 50%;
+  position: absolute;
+}
+.active .name {
+  font-weight: 300;
+}
+
+.dice {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 110px;
+  left: 440px;
+  box-shadow: 0px 0px 10px #d6d6d6;
+}
+
+.player-score.to-win {
+  font-weight: 300;
+}
+
+.dice.disappearance {
+  -webkit-animation: disappearance 200ms ease-in-out forwards;
+          animation: disappearance 200ms ease-in-out forwards;
+}/*# sourceMappingURL=style.css.map */

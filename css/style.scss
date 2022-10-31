@@ -1,0 +1,121 @@
+@import "_base";
+@import "_reset";
+@import "_utils";
+@import "_variables";
+
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+};
+
+.contents { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 1000px;
+  box-shadow: 0px 0px 30px $shadow-game;
+  text-align: center;
+};
+
+.player-0 {
+  width: 500px;
+  height: 600px;
+};
+
+.player-1 {
+  width: 500px;
+  height: 600px;
+};
+
+.player-score {
+  position: relative;
+  top: 110px;
+  font-size: 70px;
+  font-weight: 100;
+  color: #ff0000;
+};
+
+.name {
+  position: relative;
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  top: 100px;
+};
+
+.current {
+  margin-top: 7px;
+  font-size: 20px;
+  .current-score {
+    color: white;
+    font-size: 27px;
+  }
+};
+
+.current {
+  position: relative;
+  background: #ff0000;
+  width: 130px;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 10px 25px;
+  top: 280px;
+};
+
+// Activation des animations de couleurs
+
+.active {
+  background-color: $color-player-active;
+  .name::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    top: 17px;
+    margin-left: 7px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .name {
+    font-weight: 300;
+  }
+};
+
+// Dice
+
+.dice {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  top: 110px;
+  left: 440px;
+  box-shadow: 0px 0px 10px $shadow-game;
+};
+
+// Quand le joeur est gagant afficher le score avec un font-weight plus foncé;
+
+.player-score.to-win {
+  font-weight: 300;
+};
+
+
+// Activation de l'animation du Dé;
+
+.dice.disappearance {
+  animation: disappearance 200ms ease-in-out forwards;
+};
+
+
+
+
+
+
+
+
+
+
+
+

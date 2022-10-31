@@ -1,0 +1,58 @@
+// mixin : pour les boutons du jeu;
+
+@mixin buttons-game {
+  text-transform: uppercase;
+  font-size: 20px;
+};
+
+// Liste des boutons;
+
+.btn {
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+  transition: all 100ms ease-in-out;
+  border-bottom: 1px solid #000000;
+  font-weight: 100;
+  cursor: pointer;
+  &-new {
+    @include buttons-game;
+    top: 25px;
+    left: 450px;
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+  &-roll {
+    @include buttons-game;
+    top: 413px;
+    left: 455px;
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+  &-hold {
+    @include buttons-game;
+    top: 465px;
+    left: 472px;
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+};
+
+// keyframes : activation de l'animation du Dé afin de le faire disparaitre lorqu'un joueur a gagné;
+
+@keyframes disappearance {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+};
+
+
